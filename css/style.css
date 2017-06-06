@@ -1,3 +1,10 @@
+@charset "utf-8";
+@import "./fonts/Fontawesome.otf";
+@import "./fonts/fontawesome-webfont.eot";
+@import "./fonts/fontawesome-webfont.svg";
+@import "./fonts/fontawesome-webfont.ttf";
+@import "./fonts/fontawesome-webfont.woff";
+
 html,
 body,
 div,
