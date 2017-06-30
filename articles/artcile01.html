@@ -10,8 +10,8 @@
     <meta name="author" content="Roberto-wong">
     <link rel="alternate" href="/atom.xml" title="Roberto-wong" type="application/atom+xml">
     <!--<link rel="icon" href="/img/favicon.ico">-->
-    <link rel="shortcut icon" href="./css/images/logo.jpg" type="image/x-icon">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="../css/images/logo.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style.css">
     <script>
       var _hmt = _hmt || [];
       (function () {
@@ -65,7 +65,7 @@
         </a></div>
         <nav class="animated">
             <ul>
-                <li><a href="/">首页</a></li>
+                <li><a href="../index.html">首页</a></li>
                 <li><a href="/archives">归档</a></li>
                 <li><a href="/categories/develop/">技术</a></li>
                 <li><a href="/articles/life/">生活</a></li>
@@ -83,15 +83,13 @@
 
 </header>
 <div id="container">
-    <div id="main">
-        <section class="post" itemscope itemprop="blogPost">
-            <a href="./articles/artcile01.html" title="git 命令行工具的使用及操作"
-               itemprop="url">
-                <time datetime="2017-06-06T11:04:00.000Z" itemprop="datePublished">2017-07-01</time>
-                <h1 itemprop="name">git 命令行工具的使用及操作</h1>
-                <div itemprop="description">
-                    <pre>
-                        git下载地址：https://git-for-windows.github.io/
+    <div id="main" style="width: 100%;background-color: #fff;">
+        <div class="article">
+            <h4 class="title"
+                style="height: 40px;line-height: 40px;font-weight: bold;font-size: 22px;color: #000;padding-left: 50px;margin: 20px 0;">
+                git 命令行工具的使用及操作</h4>
+            <pre>
+                        git下载地址：<a href="https://git-for-windows.github.io/">https://git-for-windows.github.io/</a>
                         git环境变量配置：
                         增加：GIT_HOME = C:\Git (文件夹为git软件的安装文件夹)
                         Path添加： %GIT_HOME%\bin;(bin目录是解压后出现的文件夹，里面有git.exe)
@@ -104,95 +102,76 @@
                         git init仓库初始化
                         git status 查看仓库中的文件和被跟踪的文件
                         git status -s查看仓库中新的被跟踪的文件
-                    </pre>
-                </div>
-            </a>
-        </section>
 
-    </div>
+                        git add [filename] 添加文件跟踪，例如：
+                        git add README.md会跟踪README.md的变化。
+                        git add .会跟踪当前目录中所有文件的变化。
+                        git add --all会跟踪当前目录中所有文件的变化。
 
-    <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
 
-    <div id="asidepart">
-        <div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
-        <aside class="clearfix">
-            <div id="authorInfo">
-                <div class="author-logo"></div>
-                <div class="social-list" class="clearfix">
-                    <a href="http://weibo.com/2310906122/profile?rightmod=1&wvr=6&mod=personinfo" target="_blank" title="weibo"></a>
-                    <a href="https://github.com/Roberto-Wong" target="_blank" title="github"></a>
-                </div>
-            </div>
 
-            <div class="category-block">
-                <h3 class="asidetitle">分类</h3>
-                <ul class="category-list">
-                    <li class="category-list-item">
-                        <a class="category-list-link" href="/categories/develop/">技术</a>
-                        <span class="category-list-count">8</span>
-                        <ul class="category-list-child">
-                            <li class="category-list-item">
-                                <a class="category-list-link" href="/categories/develop/IntelliJ-IDEA/">IntelliJIDEA</a>
-                                <span class="category-list-count">1</span>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="category-list-item">
-                        <a class="category-list-link" href="/categories/life/">生活</a>
-                        <span class="category-list-count">1</span>
-                        <ul class="category-list-child">
-                            <li class="category-list-item">
-                                <a class="category-list-link" href="/categories/life/essay/">美文</a>
-                                <span class="category-list-count">1</span>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
+                        创建.gitignore文件：忽略追踪文件：
+                        node_modules 忽略所有node_modules文件夹
+                        /dist 忽略根目录下的dist文件夹
+                        *.* 忽略所有带点的文件
+                        *.html 忽略所有html文件
 
-            <div class="tagslist">
-                <p class="asidetitle">标签</p>
-                <ul class="clearfix">
-                    <li><a href="/tags/Hadoop/" title="Hadoop">Hadoop<sup>2</sup></a></li>
-                    <li><a href="/tags/IntelliJ-IDEA/" title="IntelliJ IDEA">IntelliJ IDEA<sup>1</sup></a></li>
-                    <li><a href="/tags/MapReduce/" title="MapReduce">MapReduce<sup>2</sup></a></li>
-                    <li><a href="/tags/crontab/" title="crontab">crontab<sup>1</sup></a></li>
-                    <li><a href="/tags/https/" title="https">https<sup>1</sup></a></li>
-                    <li><a href="/tags/java/" title="java">java<sup>1</sup></a></li>
-                    <li><a href="/tags/linux/" title="linux">linux<sup>2</sup></a></li>
-                    <li><a href="/tags/logback/" title="logback">logback<sup>1</sup></a></li>
-                    <li><a href="/tags/maven/" title="maven">maven<sup>1</sup></a></li>
-                    <li><a href="/tags/mysql/" title="mysql">mysql<sup>1</sup></a></li>
-                    <li><a href="/tags/nginx/" title="nginx">nginx<sup>2</sup></a></li>
-                    <li><a href="/tags/tomcat/" title="tomcat">tomcat<sup>2</sup></a></li>
-                    <li><a href="/tags/大数据/" title="大数据">大数据<sup>2</sup></a></li>
-                    <li><a href="/tags/日志配置/" title="日志配置">日志配置<sup>1</sup></a></li>
-                    <li><a href="/tags/环境搭建/" title="环境搭建">环境搭建<sup>1</sup></a></li>
-                    <li><a href="/tags/美文/" title="美文">美文<sup>1</sup></a></li>
-                </ul>
-            </div>
+                        git commit 提交一次变更后的副本到本地git文件夹下(比如说新开发了一个小功能)
+                        git commit -m '变更日志' 提交一次变更后的副本到本地git文件夹下，并添加变更日志
 
-            <div class="linkslist">
-                <p class="asidetitle">友情链接</p>
-                <ul>
-                    <li><a href="http://hexo.io" target="_blank" title="Hexo">Hexo</a></li>
-                    <li><a href="http://gengbiao.me" target="_blank" title="coney">coney's Blog</a></li>
-                </ul>
-            </div>
+                        git diff 查看修改项（现在内容和上次提交修改的内容）
+                        git log 查看提交记录（commit 28adb46f70de7d845b0edddea6eb70a01ed68e5b）
+                        git reset --hard 28adb4 自动回到原来版本的状态
+                        git help查看所有命令
 
-            <div class="rsspart">
-                <a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
-            </div>
+                        修改全局配置下用户名和邮箱信息：
+                        git config --global user.eamil '1719442545@qq.com'
+                        git config --global user.name 'webmodule'
 
-            <div class="tagcloudlist">
-                <p class="asidetitle">标签云</p>
-                <div class="tagcloudlist clearfix">
-                    <a href="/tags/Hadoop/" style="font-size: 20px;">Hadoop</a>
-                    <a href="/tags/IntelliJ-IDEA/" style="font-size: 10px;">IntelliJIDEA</a>
-                    <a href="/tags/MapReduce/" style="font-size: 20px;">MapReduce</a>
-                </div>
-            </div>
-        </aside>
+                        推送到远端的具体步骤：
+                        git init
+                        git add --all
+                        git commit -m 'v1.0.0'
+                        git remote add origin https://github.com/wmui/webmodule.git 链接远端厂库
+                        git pull --rebase origin master 获得远端文件到本地(比如：LICENSE,REMADEME.md)
+                        git push -u origin master把本地仓库推送到远端主分支(需要用户名密码)
+
+                        重远端获取到本地仓库：
+                        git remote add origin https://github.com/wmui/webmodule.git 链接远端厂库
+                        git pull origin master
+
+                        github pages部署：
+                        git clone https://github.com/wmui/wmui.github.io.github (随便任何文件夹)
+                        cd wmui.github.io.git
+                        git add --all
+                        git commit -m 'v1.0.0'
+                        git push -u origin master
+
+                        branch分支创建：
+                        git branch 查看所有的分支
+                        git branch v2 创建v2分支
+                        git checkout v2 切换到v2分支
+                        git push -u origin v2 把v2提交到远端(需要用户名密码)
+                        提交更改到v2:
+                        git add --all
+                        git commit -m 'v2 提交'
+                        git push -u origin v2
+
+                        gh-pages分支：
+                        git branch 查看所有的分支
+                        git branch gh-pages 创建分支
+                        git checkout gh-pages 切换到gh-pages分支
+                        git push -u origin gh-pages 把gh-pages提交到远端，自动复制创库文件到gh-pages分支(需要用户名密码),查看地址(wmui.github.io/webmodule)
+
+                         删除远程某个文件夹
+
+                        在.gitignore中设置忽略文件夹
+
+                        git rm -r --cached dir // 缓存本地要删除的文件夹
+                        git commit -m "delete dir"
+                        git push
+            </pre>
+        </div>
     </div>
 </div>
 <footer>
