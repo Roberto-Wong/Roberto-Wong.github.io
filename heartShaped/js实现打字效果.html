@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+    Remove this if you use the .htaccess -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>JS打字机效果</title>
+    <meta name="description" content="">
+    <meta name="author" content="Administrator">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0">
+    <!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+    <style type = "text/css">
+        #main {
+            width: 80%;
+            height: 750px;
+            margin: auto;
+            padding: 10px;
+            background: #cfe1ca;
+            border: 10px outset #f9c6aa;
+            line-height: 34px;
+            color: #13227a;
+            font-size: 20px;
+            font-family: 叶根友毛笔行书简体2012版;
+        }
+        p {
+            text-indent: 30px;
+        }
+        .icon-pen{
+            display: inline-block;
+            width: 22px;
+            height: 22px;
+            background: url("./img/pen.svg") no-repeat;
+            background-size: 22px 22px;
+            position: relative;
+            top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id = "main"> </div>
+
+    <!--兼容了手机端 兼容IE8-->
+    <script type = "text/javascript" src="../js/jquery.js"></script>
+    <script type = "text/javascript">
+        var typeWriter = {
+            msg: function(msg){
+                return msg;
+            },
+            len: function(){
+                return this.msg.length;
+            },
+            writeLen: 0,
+            speed: 150,//打字时间(ms)
+            type: function(){
+                var _this = this;   // typeWriter对象
+                document.getElementById("main").innerHTML = _this.msg.substring(0, _this.writeLen) + '<i class="icon icon-pen"></i>';
+                if(_this.writeLen == _this.len()) {
+                    _this.writeLen = 0;
+                    $(".icon-pen").fadeOut(300);
+                    clearTimeout(t);
+                } else {
+                    _this.writeLen++;
+                    var t = setTimeout(function(){_this.type()}, this.speed);
+                }
+            }
+        }
+        window.onload = function(){
+            var msg = "JS打字机效果 ，原理很简单：每次多获取一个待打出的字符串的值，输出，覆盖原来输出的内容即可，利用定时器和字符串" +
+                "JS打字机效果 ，原理很简单：每次多获取一个待打出的字符串的值，输出，覆盖原来输出的内容即可，利用定时器和字符串" +
+                "JS打字机效果 ，原理很简单：每次多获取一个待打出的字符串的值，输出，覆盖原来输出的内容即可，利用定时器和字符串" +
+                "JS打字机效果 ，原理很简单：每次多获取一个待打出的字符串的值，输出，覆盖原来输出的内容即可，利用定时器和字符串" +
+                "JS打字机效果 ，原理很简单：每次多获取一个待打出的字符串的值，输出，覆盖原来输出的内容即可，利用定时器和字符串" +
+                "JS打字机效果 ，原理很简单：每次多获取一个待打出的字符串的值，输出，覆盖原来输出的内容即可，利用定时器和字符串" +
+                "截取每次多内容字符数+1";
+            function getMsg(){
+                return msg;
+            }
+            typeWriter.msg = getMsg(msg);
+            typeWriter.type();
+        }
+    </script>
+</body>
+</html>
